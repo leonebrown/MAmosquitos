@@ -1,1 +1,1 @@
-web: streamlit run mosquitoSafe_prelim.py --server.port $PORT --browser.serverAddress https://mosquitoSafe.herokuapp.com
+web: streamlit run mosquitosafe.py --server.port $PORT --browser.serverAddress https://mosquitosafe.herokuapp.com
