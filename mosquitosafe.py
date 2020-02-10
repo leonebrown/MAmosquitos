@@ -112,9 +112,9 @@ dog = loaded_model.predict_proba(dfpredtest)[:,1]
 
 np.set_printoptions(formatter={'float': lambda x: "{0:0.2f}".format(x)})
 
-st.write("Your estimated", option1, "risk per mosquito in", user_input, "on", inputdate, "is", round(dog[0],2))
+st.write("Your estimated", option1, "risk in", user_input, "on", inputdate, "is", round(dog[0],2))
 
-st.write("Your local risk is calculated based on the number of mosquitos that have tested positive in your area over the past 16 years, as well as climate and land cover variables that affect infection rate in mosquitos. **This estimate is the probability that any given mosquito biting you has West Nile virus (WNv) or Eastern Equine Encephalitis (EEE)**. WNv and EEE are relatively rare, and for WNv in particular, approximately 80% of infected humans never show symptoms. Those that do show symptoms are typically those over the age of 40-50. **If you are over the age of 60 you are at greatest risk.** Please see https://www.cdc.gov/features/westnilevirus/index.html for more information.")
+st.write("Your local risk is calculated based on the number of mosquitos that have tested positive in your area over the past 16 years, as well as climate and land cover variables that affect infection rate in mosquitos. **This estimate is the approximate prevalence of mosquitos infected with West Nile virus (WNv) or Eastern Equine Encephalitis (EEE)**. WNv and EEE are relatively rare, and for WNv in particular, approximately 80% of infected humans never show symptoms. Those that do show symptoms are typically those over the age of 40-50. **If you are over the age of 60 you are at greatest risk.** Please see https://www.cdc.gov/features/westnilevirus/index.html for more information.")
 
 st.write("Disclaimer: This tool is not meant to provide a medical evaluation or replace the advice of a medical professional. This tool was implemented using a logistic regression machine learning algorithm as part of the developer's participation in the Insight Health Data Science program in Boston, Massachusetts, USA (https://www.insighthealthdata.com). Please use this tool at your own discretion, and always protect yourself from biting insects and other animals that may be vectors of zoonotic diseases.")
 
