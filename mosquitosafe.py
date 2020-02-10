@@ -11,23 +11,23 @@ st.title('Mosquito-borne disease risk assessor')
 st.write("User-friendly web application to assess seasonal mosquito-borne disease risk across Massachusetts")
 
 user_input = st.text_input("Search town, e.g., 'Somerville'", "Somerville")
-geolocator = Nominatim(user_agent="my-application")
+#geolocator = Nominatim(user_agent="my-application")
 
-def do_geocode(user_input):
-    try:
-        return geopy.geocode(user_input)
-    except GeocoderTimedOut:
-        return do_geocode(user_input)
+#def do_geocode(user_input):
+#    try:
+#        return geopy.geocode(user_input)
+#    except GeocoderTimedOut:
+#        return do_geocode(user_input)
 
 #try:
-location = geolocator.geocode(user_input)
+#location = geolocator.geocode(user_input)
 #print(loc.raw)
-print('Coordinates: ', location.latitude, location.longitude)
-st.write("Found: ", location)
-st.write('Coordinates: ', location.latitude, location.longitude)
+#print('Coordinates: ', location.latitude, location.longitude)
+#st.write("Found: ", location)
+#st.write('Coordinates: ', location.latitude, location.longitude)
     
-x = location.longitude
-y = location.latitude
+#x = location.longitude
+#y = location.latitude
 
 disease = ['West Nile virus','Eastern Equine Encephalitis']
 
