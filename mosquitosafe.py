@@ -62,7 +62,7 @@ if option1 == 'Eastern Equine Encephalitis' :
 else:
     loaded_model = pickle.load(open('logreg_WNVmod.sav','rb'))
 
-inputdate = option2 + " " + option3 + " " + "2020"
+inputdate = option2 + str(" ") + str(option3) + str(" ") + str(2020)
 
 #get date and convert to day of year
 #date_object = datetime.strptime(str, '%m/%d/%y')
@@ -72,23 +72,23 @@ DOY = dateTime.strftime('%j')
 #filter landcover dataframe to only have town = userinput
 LCtemp = LCdat2011[LCdat2011['town']==user_input.upper()]
 
-cc = LCtemp.at[1,'RPcultcrop']
-ss = LCtemp.at[1,'RPshrubscrub']
-do = LCtemp.at[1,'RPdevopen']
-dl = LCtemp.at[1,'RPdevlow']
-dm = LCtemp.at[1,'RPdevmed']
-dh = LCtemp.at[1,'RPdevhigh']
-gh = LCtemp.at[1,'RPgrassherb']
-ph = LCtemp.at[1,'RPpasturehay']
-ow = LCtemp.at[1,'RPopenwater']
-ehw = LCtemp.at[1,'RPemergherbwet']
-ww = LCtemp.at[1,'RPwoodywet']
-dfor = LCtemp.at[1,'RPdecidforest']
-efor = LCtemp.at[1,'RPevergrnfor']
-mfor = LCtemp.at[1,'RPmixedforest']
+cc = LCtemp['RPcultcrop'].iloc[0]
+ss = LCtemp['RPshrubscrub'].iloc[0]
+do = LCtemp['RPdevopen'].iloc[0]
+dl = LCtemp['RPdevlow'].iloc[0]
+dm = LCtemp['RPdevmed'].iloc[0]
+dh = LCtemp['RPdevhigh'].iloc[0]
+gh = LCtemp['RPgrassherb'].iloc[0]
+ph = LCtemp['RPpasturehay'].iloc[0]
+ow = LCtemp['RPopenwater'].iloc[0]
+ehw = LCtemp['RPemergherbwet'].iloc[0]
+ww = LCtemp['RPwoodywet'].iloc[0]
+dfor = LCtemp['RPdecidforest'].iloc[0]
+efor = LCtemp['RPevergrnfor'].iloc[0]
+mfor = LCtemp['RPmixedforest'].iloc[0]
 
 #filter climate dataframe to only have town = userinput
-cltemp = climdat[climdat['town']==user_input]
+cltemp = climdat[climdat['town']==user_input.upper()]
 
 cltemp['DOY'] = cltemp['DOY'].apply(str)
 cltemp['DOY'] = cltemp['DOY'].str.zfill(3)
@@ -112,7 +112,7 @@ dog = loaded_model.predict(dfpredtest)
 
 np.set_printoptions(formatter={'float': lambda x: "{0:0.2f}".format(x)})
 
-st.title("Your local WNV risk per mosquito is", print(dog))
+st.write("Your local WNV risk per mosquito is", print(dog))
 
 st.write("Your local risk is calculated based on the number of mosquitos that have tested positive in your area over the past 16 years, as well as climate and land cover variables that affect infection rate in mosquitos. This estimate is the probability that any given mosquito biting you has West Nile virus (WNv) Eastern Equine Encephalitis (EEE). WNv and EEE are rare; for West Nile virus in particular, approximately 80% of infected people never show symptoms. Those that do show symptomes are typically those over the age of 40-50. If you are over the age of 60 you are at greatest risk. Please see https://www.cdc.gov/features/westnilevirus/index.html for more information.")
 
