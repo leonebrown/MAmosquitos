@@ -112,8 +112,10 @@ dog = loaded_model.predict(dfpredtest)
 
 np.set_printoptions(formatter={'float': lambda x: "{0:0.2f}".format(x)})
 
-st.write("Your local WNV risk per mosquito is", print(dog))
+st.write("Your local", print(option1), "risk per mosquito in", print(user_input), "on", print(inputdate), "is", print(dog))
 
 st.write("Your local risk is calculated based on the number of mosquitos that have tested positive in your area over the past 16 years, as well as climate and land cover variables that affect infection rate in mosquitos. This estimate is the probability that any given mosquito biting you has West Nile virus (WNv) Eastern Equine Encephalitis (EEE). WNv and EEE are rare; for West Nile virus in particular, approximately 80% of infected people never show symptoms. Those that do show symptomes are typically those over the age of 40-50. If you are over the age of 60 you are at greatest risk. Please see https://www.cdc.gov/features/westnilevirus/index.html for more information.")
 
 st.write("Disclaimer: This tool is not meant to provide a medical evaluation or replace the advice of a medical professional. This tool was implemented using a logistic regression machine learning algorithm as part of the developer's participation in the Insight Health Data Science program in Boston, Massachusetts, USA (https://www.insighthealthdata.com). Please use this tool at your own discretion, and always protect yourself from biting insects and other animals that may be vectors of zoonotic diseases.")
+
+st.write("Accompanying slides found here: https://drive.google.com/open?id=1EBigwWTrTQufbD6xVlndKLScqe_h1GxcsvLa4H1DXhM")
