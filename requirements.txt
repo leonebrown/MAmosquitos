@@ -1,4 +1,6 @@
 streamlit
 pandas
+numpy
 geopy
+datetime
 scikit_learn
