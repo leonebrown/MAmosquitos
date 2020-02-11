@@ -121,4 +121,5 @@ st.write("Your local risk is calculated based on the number of mosquitos that ha
 
 st.write("Disclaimer: This tool is not meant to provide a medical evaluation or replace the advice of a medical professional. This tool was implemented using a logistic regression machine learning algorithm as part of the developer's participation in the Insight Health Data Science program in Boston, Massachusetts, USA (https://www.insighthealthdata.com). Please use this tool at your own discretion, and always protect yourself from biting insects and other animals that may be vectors of zoonotic diseases.")
 
-st.write("Accompanying slides found here: https://drive.google.com/open?id=1EBigwWTrTQufbD6xVlndKLScqe_h1GxcsvLa4H1DXhM")
+st.write("Please see accompanying slideshow here: https://tinyurl.com/MosquitoSafe")
+
