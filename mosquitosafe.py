@@ -121,7 +121,5 @@ st.markdown("""<br><br>""",unsafe_allow=T)
 
 st.write("Disclaimer: This tool is not meant to provide a medical evaluation or replace the advice of a medical professional. This tool was implemented using a logistic regression machine learning algorithm as part of the developer's participation in the Insight Health Data Science program in Boston, Massachusetts, USA (https://www.insighthealthdata.com). Please use this tool at your own discretion, and always protect yourself from biting insects and other animals that may be vectors of zoonotic diseases.")
 
-st.write("Please see accompanying slideshow here:")
-
 st.markdown("""<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSPllQcm5DYjLN7E6zVFLlSdxZVKVU-l_IOud4gwVCj9ESClyVr3vVaQIO-5iYJ2HW7vAFxEHsWb_ci/embed?start=false&loop=false&delayms=3000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>""",unsafe_allow_html=T)
-st.write("Weblink to slideshttps://tinyurl.com/MosquitoSafe")
+st.write("Direct weblink to above slides: https://tinyurl.com/MosquitoSafe")
