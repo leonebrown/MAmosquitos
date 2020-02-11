@@ -117,7 +117,7 @@ np.set_printoptions(formatter={'float': lambda x: "{0:0.2f}".format(x)})
 st.write("Approximately", round(dog[0],2)*100, "percent of mosquitoes in", user_input, "may be infected with", option1, "on", inputdate,".")
 
 st.write("Your local risk is calculated based on the number of mosquitos that have tested positive in your area over the past 16 years, as well as climate and land cover variables that affect infection rate in mosquitos. **This is an estimate of the prevalence of mosquitos infected with West Nile virus (WNv) or Eastern Equine Encephalitis (EEE)**. WNv and EEE are relatively rare, and for WNv in particular, approximately 80% of infected humans never show symptoms. Those that do show symptoms are typically those over the age of 40-50. **If you are over the age of 60 you are at greatest risk.** Please visit https://www.cdc.gov/features/westnilevirus/index.html for more information.")
-st.markdown("""<br>""",unsafe_allow=T)
+st.markdown("""<br><br>""",unsafe_allow_html=T)
 
 st.write("Disclaimer: This tool is not meant to provide a medical evaluation or replace the advice of a medical professional. This tool was implemented using a logistic regression machine learning algorithm as part of the developer's participation in the Insight Health Data Science program in Boston, Massachusetts, USA (https://www.insighthealthdata.com). Please use this tool at your own discretion, and always protect yourself from biting insects and other animals that may be vectors of zoonotic diseases.")
 
