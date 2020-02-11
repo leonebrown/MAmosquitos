@@ -7,7 +7,7 @@ import datetime
 from sklearn.linear_model import LogisticRegression
 import pickle
 
-st.title('Mosquito-borne disease risk assessor')
+st.title('MosquitoSafe: mosquito-borne disease risk assessor')
 st.write("User-friendly web application to assess seasonal mosquito-borne disease risk across Massachusetts")
 
 user_input = st.text_input("Enter a town town, e.g., 'Somerville'", "Somerville")
