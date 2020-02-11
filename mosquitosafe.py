@@ -10,7 +10,7 @@ import pickle
 st.title('Mosquito-borne disease risk assessor')
 st.write("User-friendly web application to assess seasonal mosquito-borne disease risk across Massachusetts")
 
-user_input = st.text_input("Search town, e.g., 'Somerville'", "Somerville")
+user_input = st.text_input("Enter a town town, e.g., 'Somerville'", "Somerville")
 #geolocator = Nominatim(user_agent="my-application")
 
 #def do_geocode(user_input):
@@ -36,15 +36,15 @@ moslist = ['January','February','March','April','May','June','July','August','Se
 datelist = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]
 
 option1 = st.selectbox(
-    'Search Disease',
+    'Choose a disease',
      disease)
 
 option2 = st.selectbox(
-    'Search Month',
+    'Select a month',
      moslist)
 
 option3 = st.selectbox(
-    'Search Day of Month',
+    'Select day of month',
      datelist)
 
 ##################################################################
@@ -115,7 +115,7 @@ np.set_printoptions(formatter={'float': lambda x: "{0:0.2f}".format(x)})
 #st.write("Your estimated", option1, "risk in", user_input, "on", inputdate, "is", round(dog[0],2))
 st.write("Approximately", round(dog[0],2)*100, "percent of mosquitoes in", user_input, "may be infected with", option1, "on", inputdate,".")
 
-st.write("Your local risk is calculated based on the number of mosquitos that have tested positive in your area over the past 16 years, as well as climate and land cover variables that affect infection rate in mosquitos. **This is an estimate of the prevalence of mosquitos infected with West Nile virus (WNv) or Eastern Equine Encephalitis (EEE)**. WNv and EEE are relatively rare, and for WNv in particular, approximately 80% of infected humans never show symptoms. Those that do show symptoms are typically those over the age of 40-50. **If you are over the age of 60 you are at greatest risk.** Please see https://www.cdc.gov/features/westnilevirus/index.html for more information.")
+st.write("Your local risk is calculated based on the number of mosquitos that have tested positive in your area over the past 16 years, as well as climate and land cover variables that affect infection rate in mosquitos. **This is an estimate of the prevalence of mosquitos infected with West Nile virus (WNv) or Eastern Equine Encephalitis (EEE)**. WNv and EEE are relatively rare, and for WNv in particular, approximately 80% of infected humans never show symptoms. Those that do show symptoms are typically those over the age of 40-50. **If you are over the age of 60 you are at greatest risk.** Please visit https://www.cdc.gov/features/westnilevirus/index.html for more information.")
 
 
 
